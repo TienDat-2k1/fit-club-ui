@@ -1,0 +1,41 @@
+@use '../../sass/variable' as *;
+@use '../../sass/mixin' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(md) {
+    & > :nth-child(2) {
+      position: fixed;
+      right: 3.2rem;
+      z-index: 99;
+    }
+  }
+}
+
+.logo {
+  width: 16rem;
+  height: 4.8rem;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 3.2rem;
+  color: white;
+
+  @include respond(md) {
+    flex-direction: column;
+    background-color: $color--appColor;
+    padding: 3.2rem;
+  }
+
+  & > li {
+    cursor: pointer;
+  }
+
+  & > li:hover {
+    color: $color--orange;
+  }
+}

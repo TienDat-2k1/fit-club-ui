@@ -1,0 +1,112 @@
+@use '../../sass/variable' as *;
+@use '../../sass/mixin' as *;
+
+.testimonials {
+  display: flex;
+  gap: 1.6rem;
+  padding: 6rem 3.2rem;
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+}
+.left-t {
+  display: flex;
+  flex: 1 1;
+  gap: 3.2rem;
+  flex-direction: column;
+  text-transform: uppercase;
+
+  & > :nth-child(1) {
+    color: $color--orange;
+    font-weight: bold;
+  }
+
+  & > :nth-child(2),
+  & > :nth-child(3) {
+    font-weight: bold;
+    font-size: 3.8rem;
+
+    @include respond(md) {
+      font-size: xx-large;
+    }
+  }
+
+  & > :nth-child(4) {
+    text-transform: none;
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 40px;
+  }
+}
+.right-t {
+  flex: 1;
+  position: relative;
+
+  @include respond(md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+
+    & > div {
+      position: relative;
+      display: none;
+    }
+
+    & > :last-child {
+      display: block;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  & > img {
+    position: absolute;
+    width: 27rem;
+    height: 32rem;
+    object-fit: cover;
+    right: 12rem;
+    top: 3.2rem;
+
+    @include respond(md) {
+      top: 0;
+      right: 0;
+      position: relative;
+      align-self: center;
+    }
+  }
+
+  & > :nth-child(1) {
+    position: absolute;
+    width: 27rem;
+    height: 32rem;
+    border: 2px solid $color--orange;
+    background-color: transparent;
+    right: 14rem;
+    top: 1.5rem;
+  }
+
+  & > :nth-child(2) {
+    position: absolute;
+    width: 27rem;
+    height: 32rem;
+    background: $color--planCard;
+    right: 10rem;
+    top: 4.8rem;
+  }
+}
+
+.arrows {
+  display: flex;
+  gap: 1.6rem;
+  position: absolute;
+  bottom: 1.6rem;
+  left: 4.8rem;
+
+  & > img {
+    width: 2.2rem;
+    cursor: pointer;
+  }
+}

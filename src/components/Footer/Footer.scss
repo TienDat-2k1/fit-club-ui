@@ -1,0 +1,45 @@
+@use '../../sass/variable' as *;
+
+.footer-container {
+  position: relative;
+
+  & > hr {
+    border: 1px solid $color--lightgray;
+  }
+}
+.footer {
+  padding: 1.6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  align-items: center;
+  justify-content: center;
+  height: 32rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 6.4rem;
+
+  & > img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+}
+
+.logo-f {
+}
+
+.blur-f-1 {
+  bottom: 0;
+  right: 15%;
+  width: 40rem;
+  height: 20rem;
+}
+.blur-f-2 {
+  bottom: 0;
+  left: 15%;
+  width: 40rem;
+  height: 20rem;
+}

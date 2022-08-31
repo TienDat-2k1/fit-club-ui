@@ -1,0 +1,283 @@
+@use '../../sass/variable' as *;
+@use '../../sass/mixin' as *;
+
+.hero {
+  display: flex;
+  // justify-content: space-between;
+
+  @include respond(md) {
+    flex-direction: column;
+  }
+}
+
+.left-h {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  flex: 3;
+  display: flex;
+  gap: 3.2rem;
+  flex-direction: column;
+}
+.right-h {
+  flex: 1;
+  position: relative;
+  background-color: $color--orange;
+
+  @include respond(md) {
+    position: relative;
+    background: none;
+  }
+}
+
+.the-best-ad {
+  margin-top: 6.4rem;
+  background-color: #363d42;
+  border-radius: 6.4rem;
+  width: fit-content;
+  padding: 2rem 1.3rem;
+  text-transform: uppercase;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $color--white;
+  letter-spacing: 1px;
+
+  @include respond(md) {
+    margin-top: 0;
+    font-size: small;
+    align-self: center;
+    transform: scale(0.8);
+  }
+
+  & > div {
+    position: absolute;
+    background-color: $color--orange;
+    width: 9rem;
+    height: 80%;
+    left: 8px;
+    border-radius: 4.8rem;
+    z-index: 1;
+  }
+
+  & > span {
+    z-index: 2;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  font-size: 8rem;
+  font-weight: bold;
+  color: $color--white;
+  text-transform: uppercase;
+
+  @include respond(md) {
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & > div:nth-of-type(1) {
+    & > span:nth-of-type(2) {
+      padding-left: 2rem;
+    }
+  }
+
+  & > div:nth-of-type(3) {
+    font-size: $font-size--default;
+    font-weight: 200;
+    text-transform: none;
+    letter-spacing: 1px;
+    width: 80%;
+
+    @include respond(md) {
+      font-size: small;
+      font-weight: 200;
+      letter-spacing: 0.6px;
+      text-align: center;
+    }
+  }
+}
+
+.figures {
+  display: flex;
+  gap: 2rem;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & > div > span:nth-of-type(1) {
+    color: $color--white;
+    font-size: 3.2rem;
+
+    @include respond(md) {
+      font-size: large;
+    }
+  }
+
+  & > div > span:nth-of-type(2) {
+    color: $color--gray;
+    text-transform: none;
+
+    @include respond(md) {
+      font-size: small;
+    }
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  font-weight: normal;
+
+  @include respond(md) {
+    justify-content: center;
+  }
+
+  & > :nth-child(1) {
+    color: $color--white;
+    background-color: $color--orange;
+    width: 14rem;
+  }
+
+  & > :nth-child(2) {
+    color: $color--white;
+    background-color: transparent;
+    width: 14rem;
+    border: 2px solid $color--orange;
+  }
+}
+
+// right h
+
+.right-h > .btn {
+  position: absolute;
+  right: 4.8rem;
+  top: 3.2rem;
+  color: black;
+}
+
+.heart-rate {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: $color--darkGrey;
+  width: fit-content;
+  padding: 1.6rem;
+  align-items: flex-start;
+  border-radius: 5px;
+  position: absolute;
+  right: 6.4rem;
+  top: 12rem;
+
+  @include respond(md) {
+    left: 1.6rem;
+    top: 3.2rem;
+  }
+
+  & img {
+    width: 3.2rem;
+  }
+
+  & > :nth-child(2) {
+    color: $color--gray;
+  }
+
+  & > :nth-child(3) {
+    color: $color--white;
+    font-size: 2.2rem;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  top: 16rem;
+  right: 20rem;
+  width: 36rem;
+
+  @include respond(md) {
+    position: relative;
+    width: 24rem;
+    left: 11rem;
+    top: 6.4rem;
+  }
+}
+.hero-image-back {
+  position: absolute;
+  top: 6.4rem;
+  right: 40rem;
+  width: 22rem;
+  z-index: -1;
+
+  @include respond(md) {
+    position: absolute;
+    width: 22rem;
+    left: 4.8rem;
+    top: -10%;
+  }
+}
+
+.calories {
+  display: flex;
+  gap: 2rem;
+  background-color: $color--caloryCard;
+  border-radius: 5px;
+  padding: 1.6rem;
+  width: fit-content;
+  position: absolute;
+  right: 52rem;
+  top: 54rem;
+
+  @include respond(md) {
+    position: relative;
+    top: 8rem;
+    left: 2rem;
+  }
+
+  & img {
+    width: 5rem;
+
+    @include respond(md) {
+      width: 3.2rem;
+    }
+  }
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 14rem;
+  }
+
+  & div > :nth-child(1) {
+    color: $color--gray;
+  }
+
+  & div > :nth-child(2) {
+    color: $color--white;
+    font-size: 2.2rem;
+
+    @include respond(md) {
+      color: $color--white;
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.hero-blur {
+  width: 35rem;
+  height: 48rem;
+  left: 0;
+
+  @include respond(md) {
+    width: 24rem;
+  }
+}

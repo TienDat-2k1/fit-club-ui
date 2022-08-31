@@ -1,0 +1,77 @@
+@use '../../sass/variable' as *;
+@use '../../sass/mixin' as *;
+
+.programs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2px;
+}
+.programs-header {
+  display: flex;
+  gap: 5rem;
+  font-weight: bold;
+  font-size: 4.8rem;
+  justify-content: center;
+  text-transform: uppercase;
+  font-style: italic;
+  color: $color--white;
+
+  @include respond(md) {
+    flex-direction: column;
+    gap: 1.6rem;
+    font-size: x-large;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+}
+
+.program-categories {
+  display: flex;
+  gap: 1.6rem;
+
+  @include respond(md) {
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+}
+.category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.8rem;
+  background-color: $color--gray;
+  padding: 3.2rem;
+
+  &:hover {
+    background: $color--planCard;
+    cursor: pointer;
+  }
+
+  & > :nth-child(1) {
+    width: 3.2rem;
+    height: 3.2rem;
+    fill: $color--white;
+  }
+
+  & > :nth-child(2) {
+    font-size: $font-size--default;
+    font-weight: bold;
+  }
+
+  & > :nth-child(3) {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+.join-now {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  & img {
+    width: 1.6rem;
+  }
+}
